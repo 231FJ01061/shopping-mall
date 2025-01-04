@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Olympus City Mall | Athens, Greece</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e9f7ff;
+        }
+
+        .rainbow {
+            background: linear-gradient(45deg, #943a80, #e292e2, #a4bcff, #fca4ed);
+            background-size: 400% 400%;
+            animation: rainbow 10s ease infinite;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .header, .footer {
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-top: 30px;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .feedback-form {
+            margin-top: 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .signin-form {
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .signin-form input {
+            margin-bottom: 15px;
+        }
+
+        .btn-signin {
+            width: 100%;
+        }
+
+        /* Popup styles */
+        .modal-header, .modal-body {
+            background-color: #fca4ed;
+        }
+        .modal-title {
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="rainbow">
+    <header class="header text-center py-5">
+        <h1><b><i>Welcome to Olympus City Mall!</i></b></h1>
+        <p>Your one-stop destination for shopping, fun, and entertainment in Athens, Greece.</p>
+    </header>
+
+    <!-- Sign-in Section -->
+    <section id="signin" class="container my-5">
+        <h2 class="section-title">Sign In or Sign Up</h2>
+        <div class="signin-form">
+            <form id="signinForm">
+                <div class="form-group">
+                    <label for="signinEmail">Email Address</label>
+                    <input type="email" class="form-control" id="signinEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signinPassword">Password</label>
+                    <input type="password" class="form-control" id="signinPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-signin">Sign In</button>
+                <button type="button" class="btn btn-success btn-signin" id="signupButton" style="margin-top: 10px;">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Breadcrumbs Section -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb container">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Olympus City Mall</li>
+        </ol>
+    </nav>
+
+    <!-- Mall Categories Section -->
+    <section id="categories" class="container my-5">
+        <h2 class="section-title">Explore Our Mall</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="cloth.jpg" alt="Clothing">
+                    <div class="card-body">
+                        <h5 class="card-title">Clothing</h5>
+                        <p class="card-text">Find the latest trends from top fashion brands worldwide.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="furniture.jpg" alt="Furniture">
+                    <div class="card-body">
+                        <h5 class="card-title">Aesthetic Furniture</h5>
+                        <p class="card-text">Decorate your home with elegant pieces from around the world.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="food.jpg" alt="Food">
+                    <div class="card-body">
+                        <h5 class="card-title">Global Food Varieties</h5>
+                        <p class="card-text">Savor a wide range of delicacies from different cultures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theatre Categories Section -->
+    <section id="theatre-categories" class="container my-5">
+        <h2 class="section-title">Theatre Categories</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="drama.jpg" alt="Drama">
+                    <div class="card-body">
+                        <h5 class="card-title">Drama</h5>
+                        <p class="card-text">Enjoy classic and contemporary drama performances.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="comedy.jpg" alt="Comedy">
+                    <div class="card-body">
+                        <h5 class="card-title">Comedy</h5>
+                        <p class="card-text">Laugh out loud with top-tier comedy acts and shows.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="musical.jpg" alt="Musicals">
+                    <div class="card-body">
+                        <h5 class="card-title">Musicals</h5>
+                        <p class="card-text">Experience the magic of music, dance, and drama combined.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Activities Section -->
+    <section id="activities" class="container my-5">
+        <h2 class="section-title">Fun for All Ages</h2>
+        <p class="quote"> <b>"Olympus City Mall is not just a place to shop, but an experience for everyone!" </b></p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="kids.jpg" alt="Kids Activities">
+                    <div class="card-body">
+                        <h5 class="card-title">Kids Entertainment</h5>
+                        <p class="card-text">Let your children enjoy games, rides, and more!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="games.jpg" alt="Interactive Games">
+                    <div class="card-body">
+                        <h5 class="card-title">Interactive Games</h5>
+                        <p class="card-text">Enjoy cutting-edge interactive games for all ages.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="vr.jpg" alt="Virtual Reality">
+                    <div class="card-body">
+                        <h5 class="card-title">Virtual Reality</h5>
+                        <p class="card-text">Dive into an immersive world with the latest VR technology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="container my-5">
+        <h2 class="section-title">We Value Your Feedback</h2>
+        <div class="feedback-form">
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="feedbackName">Your Name</label>
+                    <input type="text" class="form-control" id="feedbackName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedbackEmail">Email Address</label>
+                    <input type="email" class="form-control" id="feedbackEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedbackMessage">Your Feedback</label>
+                    <textarea class="form-control" id="feedbackMessage" rows="3" placeholder="We would love to hear your thoughts!" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success btn-signin">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal for Success Feedback -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedbackModalLabel">Thank You for Your Feedback!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    We appreciate your feedback and will work to improve our services.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Success Sign-in -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Sign In Successful!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Welcome to Olympus City Mall. Enjoy your shopping and entertainment experience!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Section -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Handle Sign-In Form Submission
+        document.getElementById('signinForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+            $('#successModal').modal('show'); // Show the success modal
+        });
+
+        // Handle Feedback Form Submission
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            $('#feedbackModal').modal('show'); // Show feedback success modal
+            document.getElementById('feedbackForm').reset(); // Reset the feedback form
+        });
+
+        // Add basic email validation for feedback
+        document.getElementById('feedbackEmail').addEventListener('input', function(e) {
+            const email = e.target.value;
+            const feedbackSubmitButton = document.querySelector('.btn-success');
+            const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            feedbackSubmitButton.disabled = !validEmail; // Disable submit button if email is invalid
+        });
+    </script>
+</body>
+</html>
